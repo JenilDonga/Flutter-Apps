@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 2), () async {
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       var user = await prefs.getString('user') ?? "";
-      if (user != null && user != "") {
+      if (user != "") {
         Navigator.push(
           context,
           MaterialPageRoute(
